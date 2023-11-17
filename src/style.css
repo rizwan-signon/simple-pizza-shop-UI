@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.text-style {
+  background: linear-gradient(to right, #ff3366, green);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+.hello {
+  text-decoration: underline overline;
+}
