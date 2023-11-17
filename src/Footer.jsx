@@ -10,10 +10,15 @@ export default function Footer() {
     <div>
       <h1 className="text-center m-4">
         we,re currently open {new Date().toLocaleString()}{" "}
-        <h1 className=" bg-green-700 inline text-2xl p-2 rounded-xl">
+        <span className=" bg-yellow-700 inline text-bold p-1 rounded-sm">
           {decision}
-        </h1>
+        </span>
       </h1>
+      <div class="flex items-center justify-center">
+        <button class=" bg-yellow-300 text-black font-bold py-2 px-4 rounded-xl">
+          order now
+        </button>
+      </div>
     </div>
   );
 }

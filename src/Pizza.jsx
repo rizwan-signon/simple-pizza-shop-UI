@@ -1,4 +1,5 @@
 import React from "react";
+
 const pizzaData = [
   {
     name: "Focaccia",
@@ -43,19 +44,23 @@ const pizzaData = [
     soldOut: false,
   },
 ];
-
 export default function Pizza() {
   return (
-    <div className=" flex">
-      {pizzaData.map((ele) => {
+    <div className="grid grid-cols-3 p-4 m-4 ">
+      {pizzaData.map((pizza) => {
         return (
-          <div className=" bg-green-100 m-3 p-4 rounded-2xl text-black">
-            <h1 className=" text-xl"> Name:{ele.name}</h1>
-
-            <img className="rounded-2xl" src={ele.photoName} alt="nothing" />
-            <h2>ingredients:{ele.ingredients}</h2>
-            <h3>{ele.soldOut}</h3>
-            <h2> price:{ele.price}</h2>
+          <div className=" m-4">
+            <img
+              className="h-32 w-32 rounded-md"
+              src={pizza.photoName}
+              alt="not found"
+            />
+            <div>
+              <h1 className=" font-bold">{pizza.name}</h1>
+              <h2 className=" font-serif text-xs">{pizza.ingredients}</h2>
+              <h2>{pizza.price}</h2>
+              <h2>{pizza.soldOut}</h2>
+            </div>
           </div>
         );
       })}
