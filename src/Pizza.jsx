@@ -20,7 +20,7 @@ const pizzaData = [
     ingredients: "mashroom,Tomato, mozarella, spinach, and ricotta cheese",
     price: "2000 Rs",
     photoName: "pizzas/spinaci.jpg",
-    soldOut: false,
+    soldOut: true,
   },
   {
     name: "KarachiKrust Pizzas",
@@ -46,10 +46,10 @@ const pizzaData = [
 ];
 export default function Pizza() {
   return (
-    <div className="grid grid-cols-3 p-4 m-4 ">
+    <div className={`grid grid-cols-3 p-4 m-4 `}>
       {pizzaData.map((pizza) => {
         return (
-          <div className=" m-4">
+          <div className={` m-4 ${pizza.soldOut ? " text-red-500" : ""} `}>
             <img
               className="h-32 w-32 rounded-md"
               src={pizza.photoName}
@@ -58,7 +58,9 @@ export default function Pizza() {
             <div>
               <h1 className=" font-bold">{pizza.name}</h1>
               <h2 className=" font-serif text-xs">{pizza.ingredients}</h2>
-              <h2>{pizza.price}</h2>
+              <h2 className={`${pizza.soldOut ? " line-through" : ""}`}>
+                {pizza.soldOut ? "SOLD OUT" : pizza.price}
+              </h2>
               <h2>{pizza.soldOut}</h2>
             </div>
           </div>

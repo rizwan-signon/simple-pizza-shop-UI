@@ -5,13 +5,13 @@ export default function Footer() {
   const closed = 22;
   const isOpen = hour >= open && hour <= closed;
 
-  const decision = isOpen ? "open" : "closed";
+  const timing = isOpen ? "open" : "closed";
   return (
     <div>
       <h1 className="text-center m-4">
         we,re currently open {new Date().toLocaleString()}{" "}
         <span className=" bg-yellow-700 inline text-bold p-1 rounded-sm">
-          {decision}
+          {timing}
         </span>
       </h1>
       <div class="flex items-center justify-center">

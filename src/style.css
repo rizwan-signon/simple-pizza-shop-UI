@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body {
+  background-color: rgb(221, 255, 221);
+}
 .text-style {
   background: linear-gradient(to right, #ff3366, green);
   -webkit-background-clip: text;
