@@ -15,7 +15,7 @@ export default function Footer() {
         </span>
       </h1>
       <div class="flex items-center justify-center">
-        <button class=" bg-yellow-300 text-black font-bold py-2 px-4 rounded-xl">
+        <button class=" bg-yellow-300 text-black font-bold py-2 px-4 rounded-xl scale-100 hover:scale-150 ease-in duration-300">
           order now
         </button>
       </div>

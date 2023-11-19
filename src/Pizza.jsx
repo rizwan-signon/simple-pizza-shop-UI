@@ -51,7 +51,7 @@ export default function Pizza() {
         return (
           <div className={` m-4 ${pizza.soldOut ? " text-red-500" : ""} `}>
             <img
-              className="h-32 w-32 rounded-md"
+              className="h-32 w-32 rounded-full scale-75 hover:scale-100 ease-in duration-100"
               src={pizza.photoName}
               alt="not found"
             />
