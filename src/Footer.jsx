@@ -17,8 +17,8 @@ export default function Footer() {
           {timing}
         </span>
       </h1>
-      <div class="flex items-center justify-center">
-        <button class=" bg-yellow-300 text-black font-bold py-2 px-4 rounded-xl scale-100 hover:scale-150 ease-in duration-300">
+      <div className="flex items-center justify-center">
+        <button className=" bg-yellow-300 text-black font-bold py-2 px-4 rounded-xl scale-100 hover:scale-105 duration-200">
           order now
         </button>
       </div>

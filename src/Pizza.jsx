@@ -49,9 +49,12 @@ export default function Pizza() {
     <div className={`grid grid-cols-3 p-4 m-4 `}>
       {pizzaData.map((pizza) => {
         return (
-          <div className={` m-4 ${pizza.soldOut ? " text-red-500" : ""} `}>
+          <div
+            key={pizza}
+            className={` m-4 ${pizza.soldOut ? " text-red-500" : ""} `}
+          >
             <img
-              className="h-32 w-32 rounded-2xl scale-75 hover:scale-100 ease-in duration-100"
+              className="h-32 w-32 rounded-2xl scale-100 hover:scale-105 ease-in duration-300"
               src={pizza.photoName}
               alt="not found"
             />
